@@ -18,7 +18,7 @@ import 'package:dio/dio.dart';
 import 'package:woosignal/helpers/shared_pref.dart';
 import 'package:device_info/device_info.dart';
 import 'dart:io' show Platform;
-import 'package:dio_proxy/dio_proxy.dart';
+import 'package:dio_proxy_plugin/dio_proxy.dart';
 
 class ApiProvider {
   late Dio _dio;
