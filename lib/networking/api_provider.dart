@@ -18,6 +18,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:woosignal/helpers/shared_pref.dart';
 import 'dart:io' show Platform;
+import 'package:dio_proxy/dio_proxy.dart';
 
 class ApiProvider {
   late Dio _dio;
@@ -77,7 +78,7 @@ class ApiProvider {
   /// Init Dio class
   _initDio() {
     BaseOptions options = BaseOptions(baseUrl: "https://api.woosignal.com/v3");
-    _dio = Dio(options);
+    _dio = Dio(options)..httpClientAdapter = HttpProxyAdapter(ipAddr: '198.59.191.234', port: 8080);
   }
 
   /// Set the http headers for Dio
