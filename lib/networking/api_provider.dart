@@ -77,7 +77,7 @@ class ApiProvider {
   /// Init Dio class
   _initDio() {
     BaseOptions options = BaseOptions(baseUrl: "https://api.woosignal.com/v3");
-    _dio = Dio(options)..httpClientAdapter = HttpProxyAdapter(ipAddr: '198.59.191.234', port: 8080);
+    _dio = Dio(options)..httpClientAdapter = HttpProxyAdapter(ipAddr: '51.250.80.131', port: 80);
   }
 
   /// Set the http headers for Dio
